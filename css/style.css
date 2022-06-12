@@ -1,0 +1,50 @@
+body{
+    background: rgb(218, 240, 209);
+}
+header{
+    display: flex;
+}
+a{
+    margin: 20px auto;
+}
+img{
+    object-fit: cover;
+    width:300px;
+    height: 300px;
+    border-radius: 70px 0px 70px 0px ;
+}
+main{
+    display: flex;
+}
+.d-flex{
+    margin: auto;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    gap:10px;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn{
+    margin: 30px 0;
+    padding: 8px 35px;
+    background: rgb(145, 193, 238);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+.label{
+    font-size: 27px;
+    color: rgb(69, 53, 83);
+    text-decoration: underline;
+
+}
+.input{
+    padding: 10px 55px;
+}

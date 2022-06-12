@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="./css/style.css">
     <meta charset="UTF-8">
     <title>Login</title>
     
 </head>
 <body>
-    <div class="card" style="width: 18rem;">
-        <img src="https://sun1-85.userapi.com/s/v1/if1/4whN6CmPh9fJMw2lkDgxs6G2MATTTrBftbgd0wcSAUIc3xYSHoHOD96lyBPNR-Te0ub8R6i-.jpg?size=200x200&quality=96&crop=360,0,1200,1200&ava=1" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+  <header>
+    <a href="#s">
+      <img class="logo" src="./imgs/logowebp.webp" alt="logo">
+    </a>
+  </header>
+  
+  <main>
+    <div class="d-flex flex-column align-items-center">
+      <form name="sign-in" class="sign-in">
+        <div class="email  input-email">
+          <label for="InputEmail" class="label">Email</label>
+          <input type="email" class="input" id="InputEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                 placeholder="Enter Your Email" aria-describedby="emailHelp" name="user-email" required>
         </div>
-      </div> 
+        <div class="password input-password">
+          <label for="InputPassword" class="label">Password</label>
+          <input type="password" class="input" id="InputPassword" pattern=".{6,}"
+                 placeholder="Enter Your Password" name="user-password" required>
+        </div>
+        <button type="submit" class="btn" name="authorization-button" >Login</button>
+      </form>
+    </div>
+  </main>
 
 
 
