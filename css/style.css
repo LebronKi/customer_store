@@ -1,5 +1,5 @@
 body{
-    background: rgb(218, 240, 209);
+    background: rgb(199, 236, 228);
 }
 header{
     display: flex;
@@ -24,7 +24,7 @@ main{
 .email{
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 30px 0 10px 0;
     gap:10px;
 }
 .password{
@@ -33,14 +33,12 @@ main{
     gap: 10px;
 }
 .btn{
-    margin: 30px 0;
+    margin: 30px 0  ;
     padding: 8px 35px;
-    background: rgb(145, 193, 238);
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 20px;
-    border: none;
-    border-radius: 10px;
 }
+
 .label{
     font-size: 27px;
     color: rgb(69, 53, 83);
@@ -49,4 +47,10 @@ main{
 }
 .input{
     padding: 10px 55px;
+    border-radius: 50px;
+    border: 2px solid rgb(32, 200, 230);
+}
+.errorInput, .errorPassword{
+    display: none;
+    color: red;
 }

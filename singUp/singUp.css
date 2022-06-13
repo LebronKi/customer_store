@@ -1,4 +1,35 @@
 body{
-    background: url(../imgs/JGAAAgNobuA-1920.jpg) no-repeat;
-    background-size: cover;
+    background: rgb(167, 243, 239);
+}
+header{
+    font-size: 55px;
+    text-align: center;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    margin: 0 0 100px;
+}
+.email, .password , .repeatPassword{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+.label{
+    font-size: 27px;
+    color: rgb(69, 53, 83);
+    margin: 10px 0;
+}
+input{
+    padding: 10px 55px;
+    border-radius: 50px;
+    border: 2px solid rgb(32, 200, 230);
+}
+p{
+    display: flex;
+}
+button{
+    margin: 30px auto ;
+    padding: 8px 35px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
 }

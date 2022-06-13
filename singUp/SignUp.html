@@ -8,6 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>Sing Up Here</header>
+    <main>
+        <form name="formSingUp">
+            <div class="email">
+                <label for="input-email" class="label">Email</label>
+                <input type="email" name="NewInputEmail" id="NewEmail" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    required >
+            </div>
+            <div class="password">
+                <label for="input-password" class="label">Password</label>
+                <input type="password" name="newInputPassword" id="NewPassword" placeholder="Enter Your Password" required>
+            </div>
+            <div class="repeatPassword">
+                <label for="input-password" class="label">Repeat password</label>
+                <input type="password" name="newInputPasswordRepeat" id="NewPasswordRepeat" placeholder="Enter Your Password" required>
+            </div>
+            <p>
+                <button type="submit" name="button">Sign Up</button>
+            </p>
+        </form>
+    </main>
+    <script src="../singUp/signup.js"></script>
 </body>
 </html>
