@@ -1,3 +1,5 @@
+//наша форма и его элементы
+
 const pageLogin = document.forms.login;
 const loginUserEmail = pageLogin.userEmail
 const loginUserPassword = pageLogin.userPassword
@@ -8,6 +10,7 @@ let loginSms = document.querySelector('.log-in')
 
 
 
+//валидация
 
 function isUserDataValid () {
     if (pageLogin.checkValidity() == true) {
@@ -19,37 +22,38 @@ function isUserDataValid () {
 
 
 function isInputFieldValid () {
-    if (loginUserEmail.checkValidity() == false || loginUserEmail.value.length < 1 ) {
+    if (loginUserEmail.checkValidity() == false) {
         mistakeInput.style.display = 'block'
         loginBtn.disabled = true
     } else {
         mistakeInput.style.display = 'none'
-        loginBtn.disabled = false
     }
 }
 function isPasswordFieldValid () {
-    if (loginUserPassword.checkValidity() == false || loginUserPassword.value.length < 1 ) {
+    if (loginUserPassword.checkValidity() == false) {
         mistakePassword.style.display = 'block'
         loginBtn.disabled = true
     } else {
         mistakePassword.style.display = 'none'
-        loginBtn.disabled = false
     }
 }
-
+pageLogin.addEventListener('change', isUserDataValid)
 loginUserEmail.addEventListener('change', isInputFieldValid)
 loginUserPassword.addEventListener('change', isPasswordFieldValid)
 
-window.newUser = [
+
+
+
+window.appUsers = [
     {
         email: 'dima@yandex.ru',
-        password: '1234567'
+        password: '1234567',
     }
 ];
 
 function isUserEnter (email) {
     let userEmail = email.value;
-    if (Boolean(window.newUser.find(user => user.email === userEmail))) {
+    if (Boolean(window.appUsers.find(user => user.email === userEmail))) {
         return true
     } else {
         return false
@@ -59,7 +63,7 @@ function isUserEnter (email) {
 let loginAccount = function (email, password) {
     if (isUserEnter(email) === true) {
         let userPassword = password.value;
-        return Boolean(window.newUser.find(user => user.password === userPassword));
+        return Boolean(window.appUsers.find(user => user.password === userPassword));
     }
 }
 
@@ -69,7 +73,7 @@ pageLogin.addEventListener('submit', function (event) {
         mistakeInput.innerHTML = "This user exists";
     } else  {
         if (loginAccount(loginUserEmail, loginUserPassword) == true) {
-            loginSms.innerHTML = 'Сompleted successfully!!!'
+            loginSms.innerHTML = 'Сompleted!'
             loginSms.style.fontSize = '25px'
             loginSms.style.color = 'green'
         } else {
