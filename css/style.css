@@ -50,7 +50,10 @@ main{
     border-radius: 50px;
     border: 2px solid rgb(32, 200, 230);
 }
-.errorInput, .errorPassword{
+.error-input, .error-password{
     display: none;
     color: red;
+}
+.question{
+    font-size: 25px;
 }

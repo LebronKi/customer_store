@@ -17,30 +17,28 @@
     <div class="block">
       <form name="login" class="sign-in">
         <div class="email  input-email">
-          <label for="InputEmail" class="label">Email</label>
-          <input type="email" class="input" id="InputEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          <label for="inputEmail" class="label">Email</label>
+          <input type="email" class="input" id="inputEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                  placeholder="Enter Your Email" aria-describedby="emailHelp" name="userEmail"  required>
         </div>
-        <div class="errorInput">
-          error
+        <div class="error-input">
+          Error. The email was entered incorrectly
         </div>
-
         <div class="password input-password">
-          <label for="InputPassword" class="label">Password</label>
-          <input type="password" class="input" id="InputPassword" pattern=".{6,}"
+          <label for="inputPassword" class="label">Password</label>
+          <input type="password" class="input" id="inputPassword" pattern=".{6,}"
                  placeholder="Enter Your Password" name="userPassword" required>
         </div>
-        <div class="errorPassword">
-          error
+        <div class="error-password">
+          Error. The password was entered incorrectly
         </div>
         <button type="submit" class="btn" name="authorizationBtn">Login</button>
       </form>
       <div class="log-in"></div>
-      <span class="mt-3">
+      <span class="question">
         Don't have account?
         <a href="./singUp/SignUp.html">Sign Up</a>
       </span>
-    </div>
     </div>
   </main>
 <script src="./index.js"></script>

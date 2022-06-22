@@ -1,19 +1,19 @@
-//наша форма и его элементы
+// Our form and elements
 
-const pageLogin = document.forms.login;
-const loginUserEmail = pageLogin.userEmail
-const loginUserPassword = pageLogin.userPassword
-const loginBtn  = pageLogin.authorizationBtn
-const mistakeInput = document.querySelector('.errorInput')
-const mistakePassword = document.querySelector('.errorPassword')
-let loginSms = document.querySelector('.log-in')
+const loginPageForm = document.forms.login
+const loginUserEmail = loginPageForm.userEmail
+const loginUserPassword = loginPageForm.userPassword
+const loginBtn  = loginPageForm.authorizationBtn
+const errorInput = document.querySelector('.error-input')
+const errorPassword = document.querySelector('.error-password')
+let loginStateNotification = document.querySelector('.log-in')
 
 
 
-//валидация
+//validation
 
-function isUserDataValid () {
-    if (pageLogin.checkValidity() == true) {
+function handleUserDataValid () {
+    if (loginPageForm.checkValidity()) {
         loginBtn.disabled = false
     } else {
         loginBtn.disabled = true
@@ -21,25 +21,25 @@ function isUserDataValid () {
 }
 
 
-function isInputFieldValid () {
-    if (loginUserEmail.checkValidity() == false) {
-        mistakeInput.style.display = 'block'
+function handleInputFieldValid () {
+    if (loginUserEmail.checkValidity()) {
+        errorInput.style.display = 'none'
         loginBtn.disabled = true
     } else {
-        mistakeInput.style.display = 'none'
+        errorInput.style.display = 'block'
     }
 }
-function isPasswordFieldValid () {
-    if (loginUserPassword.checkValidity() == false) {
-        mistakePassword.style.display = 'block'
+function handlePasswordFieldValid () {
+    if (loginUserPassword.checkValidity()) {
+        errorPassword.style.display = 'none'
         loginBtn.disabled = true
-    } else {
-        mistakePassword.style.display = 'none'
+    } else{
+       errorPassword.style.display = 'block'
     }
 }
-pageLogin.addEventListener('change', isUserDataValid)
-loginUserEmail.addEventListener('change', isInputFieldValid)
-loginUserPassword.addEventListener('change', isPasswordFieldValid)
+loginPageForm.addEventListener('change', handleUserDataValid)
+loginUserEmail.addEventListener('change', handleInputFieldValid)
+loginUserPassword.addEventListener('change', handlePasswordFieldValid)
 
 
 
@@ -67,18 +67,18 @@ let loginAccount = function (email, password) {
     }
 }
 
-pageLogin.addEventListener('submit', function (event) {
+loginPageForm.addEventListener('submit', function (event) {
     event.preventDefault();
     if (isUserEnter(loginUserEmail) == false) {
-        mistakeInput.innerHTML = "This user exists";
+        errorInput.innerHTML = "This user exists";
     } else  {
         if (loginAccount(loginUserEmail, loginUserPassword) == true) {
-            loginSms.innerHTML = 'Сompleted!'
-            loginSms.style.fontSize = '25px'
-            loginSms.style.color = 'green'
+            loginStateNotification.innerHTML = 'Login completed successfully!'
+            loginStateNotification.style.fontSize = '25px'
+            loginStateNotification.style.color = 'green'
         } else {
-            loginSms.style.color = 'red'
-            loginSms.innerHTML = 'ERROR'
+            loginStateNotification.style.color = 'red'
+            loginStateNotification.innerHTML = 'Error,the form is filled out incorrectly '
         }
     }
 })

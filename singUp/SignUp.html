@@ -12,25 +12,25 @@
     <main>
         <form name="formSingUp">
             <div class="email">
-                <label for="input-email" class="label">Email</label>
-                <input type="email" name="NewInputEmail" id="NewEmail" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                <label for="newInputEmail" class="label">Email</label>
+                <input type="email" name="NewInputEmail" id="newInputEmail" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                     required >
             </div>
-            <div class="fail">Error,please retry</div>
+            <div class="fail">Error. The email was entered incorrectly</div>
             <div class="password">
-                <label for="input-password" class="label">Password</label>
-                <input type="password" name="newInputPassword" id="NewPassword" placeholder="Enter Your Password" pattern=".{6,}" required>
+                <label for="NewInputPassword" class="label">Password</label>
+                <input type="password" name="newInputPassword" id="newInputPassword" placeholder="Enter Your Password" pattern=".{6,}" required>
             </div>
-            <div class="failSecond">Error,please retry</div>
+            <div class="failSecond">Error. The password was entered incorrectly</div>
             <div class="repeatPassword">
-                <label for="input-password" class="label">Repeat password</label>
-                <input type="password" name="newInputPasswordRepeat" id="NewPasswordRepeat" placeholder="Enter Your Password" pattern=".{6,}" required>
+                <label for="newInputPasswordRepeat" class="label">Repeat password</label>
+                <input type="password" name="newInputPasswordRepeat" id="newInputPasswordRepeat" placeholder="Enter Your Password" pattern=".{6,}" required>
             </div>
-            <div class="failThree">Error,please retry</div>
+            <div class="failThree">Error. The password doesn't match</div>
             <p>
                 <button type="submit" name="button">Sign Up</button>
             </p>
-        </form>
+        </form>w
         <div class="registered"></div>
     </main>
     <script src="../singUp/signup.js"></script>
