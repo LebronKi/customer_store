@@ -11,9 +11,6 @@ const errorRepeatPassword = document.querySelector('.failThree')
 const registered = document.querySelector('.registered')
 
 
-
-//валидация 
-
 function isUserDataValid () {
     if (signPageForm.checkValidity()) {
         signBtn.disabled = false
@@ -23,7 +20,7 @@ function isUserDataValid () {
 }
 
 function isInputFieldValid () {
-    if (signInputEmail.checkValidity() == false) {
+    if (signInputEmail.checkValidity() === false) {
         errorInput.style.display = 'block'
         signBtn.disabled = true 
     } else {
@@ -32,7 +29,7 @@ function isInputFieldValid () {
 }
 
 function isPasswordFieldValid () {
-    if (signInputPassword.checkValidity() == false) {
+    if (signInputPassword.checkValidity() === false) {
         errorPassword.style.display = 'block'
         signBtn.disabled = true
     } else {
@@ -41,7 +38,7 @@ function isPasswordFieldValid () {
 }
 
 function isPasswordRepeatFieldValid () {
-    if (signInputPasswordRepeat.checkValidity() == false) {
+    if (signInputPasswordRepeat.checkValidity() === false) {
         errorRepeatPassword.style.display = 'block'
         signBtn.disabled = false
     } else {
@@ -66,8 +63,6 @@ function isUserEnter (email) {
     let userEmail = email.value;
     if (Boolean(window.appUsers.find(user => user.email === userEmail))) {
         return true
-    } else {
-        return false
     }
 }
 
@@ -85,14 +80,14 @@ function isSignPasswordRepeat (email, password) {
 }
 signPageForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    if (isUserEnter(signInputEmail) == false) {
+    if (isUserEnter(signInputEmail) === false) {
         errorInput.innerHTML = "This user exists";
     } else  {
-        if (isSignPassword(signInputEmail, signInputPassword) == true) {
+        if (isSignPassword(signInputEmail, signInputPassword) === true) {
             registered.innerHTML = 'Сompleted successfully!!!'
             registered.style.fontSize = '25px'
             registered.style.color = 'green'
-
+            completed()
         } else {
             registered.style.fontSize = '25px'
             registered.style.color = 'red'
@@ -102,4 +97,9 @@ signPageForm.addEventListener('submit', function (event) {
 })
 
 
+function completed (){
+    setTimeout(()=>{
+        window.location.replace('../main/main.html');
+    },1000)
+}
 

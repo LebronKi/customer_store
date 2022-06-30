@@ -1,0 +1,8 @@
+body{
+    background: #e2eaf6;
+}
+.google-map {
+    height: 500px;
+    max-width:  100%;
+    border: 5px solid #3f95e8;
+}
