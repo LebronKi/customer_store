@@ -51,12 +51,12 @@ window.appUsers = [
     }
 ];
 
+
+
 function isUserEnter (email) {
     let userEmail = email.value;
     if (Boolean(window.appUsers.find(user => user.email === userEmail))) {
         return true
-    } else {
-        return false
     }
 }
 
@@ -69,16 +69,46 @@ let loginAccount = function (email, password) {
 
 loginPageForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    if (isUserEnter(loginUserEmail) == false) {
+    if (isUserEnter(loginUserEmail) === false) {
         errorInput.innerHTML = "This user exists";
     } else  {
-        if (loginAccount(loginUserEmail, loginUserPassword) == true) {
+        if (loginAccount(loginUserEmail, loginUserPassword) === true) {
+
             loginStateNotification.innerHTML = 'Login completed successfully!'
             loginStateNotification.style.fontSize = '25px'
             loginStateNotification.style.color = 'green'
+            completed()
+            localStorage.setItem('sign-in','enter')
         } else {
             loginStateNotification.style.color = 'red'
             loginStateNotification.innerHTML = 'Error,the form is filled out incorrectly '
         }
     }
 })
+
+function completed (){
+    setTimeout(()=>{
+        window.location.replace('./src/html/main.html');
+        localStorage.setItem('person',JSON.stringify(appUsers))
+    },1000)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

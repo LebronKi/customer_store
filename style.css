@@ -1,0 +1,59 @@
+body{
+    background: rgb(199, 236, 228);
+}
+header{
+    display: flex;
+}
+a{
+    font-size: 25px;
+    margin: 20px auto;
+
+}
+img{
+    object-fit: cover;
+    width:300px;
+    height: 300px;
+    border-radius: 70px 0px 70px 0px ;
+}
+main{
+    display: flex;
+}
+.block{
+    margin: auto;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 10px 0;
+    gap:10px;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn{
+    margin: 30px 0  ;
+    padding: 8px 35px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.label{
+    font-size: 27px;
+    color: rgb(69, 53, 83);
+    text-decoration: underline;
+
+}
+.input{
+    padding: 10px 55px;
+    border-radius: 50px;
+    border: 2px solid rgb(32, 200, 230);
+}
+.error-input, .error-password{
+    display: none;
+    color: red;
+}
+.question{
+    font-size: 25px;
+}

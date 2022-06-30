@@ -4,5 +4,9 @@ body{
 .google-map {
     height: 500px;
     max-width:  100%;
-    border: 5px solid #3f95e8;
+    border: 7px solid #3f95e8;
+}
+h1{
+    text-decoration: underline;
+    font-size: 30px;
 }

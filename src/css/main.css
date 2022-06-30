@@ -1,10 +1,13 @@
+body{
+    background: cadetblue;
+}
 .header{
     margin: 0 auto;
     max-width: 600px;
 }
 .header img{
     height: 260px;
-    width :600px;
+    width :650px;
     object-fit: cover;
 }
 .container{
@@ -17,8 +20,9 @@
     list-style-type: square;
 }
 .header__link.active{
-    color: red;
+    color: #85fc03;
     text-decoration: underline;
+    font-weight: 900;
 }
 a{
     color:black;
@@ -26,9 +30,15 @@ a{
 }
 .text{
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 .text b {
-    color: dodgerblue;
+    color: #e7ebf6;
     font-size: 25px;
+    text-decoration: underline;
+}
+.text c {
+    color: #a4045a;
+    font-size: 25px;
+    font-weight: 900;
 }
