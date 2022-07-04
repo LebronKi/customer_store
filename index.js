@@ -77,8 +77,8 @@ loginPageForm.addEventListener('submit', function (event) {
             loginStateNotification.innerHTML = 'Login completed successfully!'
             loginStateNotification.style.fontSize = '25px'
             loginStateNotification.style.color = 'green'
-            completed()
             localStorage.setItem('sign-in','enter')
+            completed()
         } else {
             loginStateNotification.style.color = 'red'
             loginStateNotification.innerHTML = 'Error,the form is filled out incorrectly '

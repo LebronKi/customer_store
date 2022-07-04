@@ -22,7 +22,7 @@ function isUserDataValid () {
 function isInputFieldValid () {
     if (signInputEmail.checkValidity() === false) {
         errorInput.style.display = 'block'
-        signBtn.disabled = true 
+        signBtn.disabled = true
     } else {
         errorInput.style.display = 'none'
     }
@@ -51,13 +51,7 @@ signInputEmail.addEventListener('change', isInputFieldValid)
 signInputPassword.addEventListener('change', isPasswordFieldValid)
 signInputPasswordRepeat.addEventListener('change', isPasswordRepeatFieldValid)
 
-
-window.appUsers = [
-    {
-        email: 'namedima@yandex.ru',
-        password: '1234567',
-    }
-];
+window.appUsers = [ ]
 
 function isUserEnter (email) {
     let userEmail = email.value;
@@ -80,14 +74,26 @@ function isSignPasswordRepeat (email, password) {
 }
 signPageForm.addEventListener('submit', function (event) {
     event.preventDefault();
+    let newUserEmailValue = signInputEmail.value
+    let newUserPasswordValue = signInputPassword.value
+    let signInputPasswordRepeatValue = signInputPasswordRepeat.value
+
     if (isUserEnter(signInputEmail) === false) {
         errorInput.innerHTML = "This user exists";
     } else  {
-        if (isSignPassword(signInputEmail, signInputPassword) === true) {
-            registered.innerHTML = 'Сompleted successfully!!!'
+        if (signInputPasswordRepeatValue === newUserPasswordValue) {
+            registered.innerHTML = 'Successfully Sign-Up!!!'
             registered.style.fontSize = '25px'
             registered.style.color = 'green'
             completed()
+            let appUsersNew = JSON.parse(localStorage.getItem('users'))
+            appUsersNew.push(
+                {
+                    email: signInputEmail.value,
+                    password : signInputPassword.value
+                })
+
+            localStorage.setItem('newUserSignUp',JSON.stringify(appUsersNew))
         } else {
             registered.style.fontSize = '25px'
             registered.style.color = 'red'
@@ -96,10 +102,11 @@ signPageForm.addEventListener('submit', function (event) {
     }
 })
 
-
+let appUsersNew = JSON.parse(localStorage.getItem('users'))
 function completed (){
     setTimeout(()=>{
-        window.location.replace('../main/main.html');
-    },1000)
+        window.location.replace('./main.html');
+        localStorage.setItem('newUserSignUp',JSON.stringify(appUsersNew))
+        },1000)
 }
 
