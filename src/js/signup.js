@@ -1,4 +1,4 @@
-//форма и его элементы
+// form
 
 const signPageForm = document.forms.formSingUp;
 const signInputEmail = signPageForm.NewInputEmail
@@ -69,12 +69,11 @@ function isSignPassword (email, password) {
 function isSignPasswordRepeat (email, password) {
     if (isUserEnter(email) === true) {
         let userPassword = password.value;
-        return Boolean(window.appUsers.find(user => user.password === userPassword));
+        return Boolean(window.appUsersNew.find(user => user.password === userPassword));
     }
 }
 signPageForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    let newUserEmailValue = signInputEmail.value
     let newUserPasswordValue = signInputPassword.value
     let signInputPasswordRepeatValue = signInputPasswordRepeat.value
 
@@ -86,13 +85,12 @@ signPageForm.addEventListener('submit', function (event) {
             registered.style.fontSize = '25px'
             registered.style.color = 'green'
             completed()
-            let appUsersNew = JSON.parse(localStorage.getItem('users'))
+            let appUsersNew =  [ ]
             appUsersNew.push(
                 {
                     email: signInputEmail.value,
                     password : signInputPassword.value
                 })
-
             localStorage.setItem('newUserSignUp',JSON.stringify(appUsersNew))
         } else {
             registered.style.fontSize = '25px'
@@ -102,11 +100,8 @@ signPageForm.addEventListener('submit', function (event) {
     }
 })
 
-let appUsersNew = JSON.parse(localStorage.getItem('users'))
-function completed (){
-    setTimeout(()=>{
+function completed() {
+    setTimeout(() => {
         window.location.replace('./main.html');
-        localStorage.setItem('newUserSignUp',JSON.stringify(appUsersNew))
-        },1000)
+        }, 1000)
 }
-
