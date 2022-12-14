@@ -1,5 +1,6 @@
 body{
     background: cadetblue;
+    color: #fff;
 }
 header{
     display: flex;
@@ -41,7 +42,7 @@ main{
 
 .label{
     font-size: 27px;
-    color: rgb(69, 53, 83);
+    color: #fff;
     text-decoration: underline;
 
 }
@@ -57,3 +58,8 @@ main{
 .question{
     font-size: 25px;
 }
+
+@media (min-width:420px) and (max-width:421px){
+
+}
+
