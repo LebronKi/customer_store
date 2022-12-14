@@ -1,6 +1,6 @@
 body{
     color: #fff;
-    max-width: 420px;
+    max-width: 414px;
     margin: 0 auto;
     border: 3px solid #efab67;
     padding: 10px 0;
@@ -62,5 +62,9 @@ main{
     font-size: 25px;
 }
 
-
-
+@media (min-width: 414px){
+    body{
+        max-width: 414px;
+        margin: 0 auto;
+    }
+}

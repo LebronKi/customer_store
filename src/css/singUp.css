@@ -1,12 +1,12 @@
 body{
-    background: rgb(167, 243, 239);
+    background: rgb(0, 0, 0);
 }
 header{
     font-size: 55px;
     text-align: center;
     height: 70px;
-    background: rgb(255, 255, 255);
     margin: 0 0 100px;
+    color: #fff;
 }
 .email, .password , .repeatPassword{
     display: flex;
@@ -18,6 +18,7 @@ header{
     font-size: 27px;
     color: rgb(69, 53, 83);
     margin: 10px 0;
+
 }
 input{
     padding: 10px 55px;
