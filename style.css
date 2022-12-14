@@ -4,7 +4,7 @@ body{
     margin: 0 auto;
     border: 3px solid #efab67;
     padding: 10px 0;
-    background: black;
+    background: #000;
 }
 header{
     display: flex;
