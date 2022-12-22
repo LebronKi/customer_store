@@ -75,7 +75,7 @@ loginPageForm.addEventListener('submit', function (event) {
         if (loginAccount(loginUserEmail, loginUserPassword) === true) {
 
             loginStateNotification.innerHTML = 'Login completed successfully!'
-            loginStateNotification.style.fontSize = '25px'
+            loginStateNotification.style.fontSize = '16px'
             loginStateNotification.style.color = 'green'
             localStorage.setItem('sign-in','enter')
             completed()

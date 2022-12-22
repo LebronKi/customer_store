@@ -1,41 +1,50 @@
 body{
-    background: cadetblue;
+    background: #000000;
+    max-width: 420px;
+    margin: 0 auto;
 }
 .header{
     margin: 0 auto;
     max-width: 600px;
 }
-.header img{
-    height: 260px;
-    width :650px;
+.a-img{
+    display: flex;
+}
+.header__logo{
+    width: 300px;
     object-fit: cover;
+    margin: 50px auto 50px;
 }
 .container{
     margin: 0 auto;
     max-width: 600px;
 }
 .header__list li{
-   margin: 10px 0;
-    font-size: 30px;
+    margin: 10px 0;
+    font-size: 25px;
     list-style-type: square;
+    color: white;
 }
 .header__link.active{
-    color: #85fc03;
+    color: #efab67;
     text-decoration: underline;
     font-weight: 900;
 }
 a{
-    color:black;
+    color: white;
     text-decoration: none;
 }
 .text{
-    text-align: center;
+    text-align:center;
     font-size: 25px;
+    color: white;
+    margin: 15px 10px 0;
 }
 .text b {
-    color: #e7ebf6;
+    color: #efab67;
     font-size: 25px;
     text-decoration: underline;
+    margin: 0 10px;
 }
 .text c {
     color: #a4045a;

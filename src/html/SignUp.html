@@ -8,27 +8,29 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <header>Sing Up Here</header>
+    <a href="#s">
+        <img src="../imgs/recruiter.png " alt="sign">
+    </a>
     <main>
         <form name="formSingUp">
             <div class="email">
                 <label for="newInputEmail" class="label">Email</label>
-                <input type="email" name="NewInputEmail" id="newInputEmail" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                <input type="email" name="NewInputEmail" id="newInputEmail" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                     required >
             </div>
             <div class="fail">Error. The email was entered incorrectly</div>
             <div class="password">
                 <label for="NewInputPassword" class="label">Password</label>
-                <input type="password" name="newInputPassword" id="newInputPassword" placeholder="Enter Your Password" pattern=".{6,}" required>
+                <input type="password" name="newInputPassword" id="newInputPassword" placeholder="Enter your password" pattern=".{6,}" required>
             </div>
             <div class="failSecond">Error. The password was entered incorrectly</div>
             <div class="repeatPassword">
                 <label for="newInputPasswordRepeat" class="label">Repeat password</label>
-                <input type="password" name="newInputPasswordRepeat" id="newInputPasswordRepeat" placeholder="Enter Your Password" pattern=".{6,}" required>
+                <input type="password" name="newInputPasswordRepeat" id="newInputPasswordRepeat" placeholder="Enter your password" pattern=".{6,}" required>
             </div>
             <div class="failThree">Error. The password doesn't match</div>
             <p>
-                <button type="submit" name="button">Sign Up</button>
+                <button type="submit"  name="button">Sign Up</button>
             </p>
         </form>
         <div class="registered"></div>

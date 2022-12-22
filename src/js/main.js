@@ -3,7 +3,7 @@ const body = document.querySelector('body')
 const device = navigator.userAgent
 const user = localStorage.getItem('person')
 const person = JSON.parse(user)
-welcomeText.innerHTML = `Hi, <b>${person[0].email}!</b> <c>You logged in from</c> ${device}`
+welcomeText.innerHTML = `Welcome, <b>${person[0].email}!</b><br/> <c>You logged in from</c> ${device}`
 
 let clickExit = function () {
     const btnExit = document.querySelector('.btn-exit')

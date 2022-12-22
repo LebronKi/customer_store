@@ -81,8 +81,8 @@ signPageForm.addEventListener('submit', function (event) {
         errorInput.innerHTML = "This user exists";
     } else  {
         if (signInputPasswordRepeatValue === newUserPasswordValue) {
-            registered.innerHTML = 'Successfully Sign-Up!!!'
-            registered.style.fontSize = '25px'
+            registered.innerHTML = 'Successfully sign-up!'
+            registered.style.fontSize = '16px'
             registered.style.color = 'green'
             completed()
             let appUsersNew =  [ ]
@@ -93,9 +93,9 @@ signPageForm.addEventListener('submit', function (event) {
                 })
             localStorage.setItem('newUserSignUp',JSON.stringify(appUsersNew))
         } else {
-            registered.style.fontSize = '25px'
+            registered.style.fontSize = '16px'
             registered.style.color = 'red'
-            registered.innerHTML = 'ERROR'
+            registered.innerHTML = 'Error, passwords don\'t match...'
         }
     }
 })

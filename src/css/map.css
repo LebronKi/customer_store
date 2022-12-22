@@ -1,12 +1,14 @@
 body{
-    background: #e2eaf6;
+    background: #000000;
 }
 .google-map {
     height: 500px;
-    max-width:  100%;
-    border: 7px solid #3f95e8;
+    width:100%;
+    border: 3px solid #eec59c;;
+
 }
 h1{
+    font-size: 25px;
     text-decoration: underline;
-    font-size: 30px;
 }
+

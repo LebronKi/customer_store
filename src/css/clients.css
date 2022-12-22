@@ -3,16 +3,25 @@ body{
 }
 .name-table{
     display: flex;
+    color: white;
+    margin: 10px 0;
+    width: 580px;
+    justify-content: space-between;
+}
+p{
+    font-size: 18px;
+    margin: 10px 15px;
+    width: 70px;
+
+}
+.header__logo{
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
 }
 .table{
     display: flex;
-}
-p{
-    width: 350px;
-    height: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+    justify-content: space-between;
 }
 .table-info1,
 .table-info2,
@@ -20,18 +29,26 @@ p{
 .table-info4,
 .table-info5,
 .table-info6{
-    text-align: center;
-    width: 350px;
-    height: 100px;
-    border:7px solid #89d518;
+    border:1px solid #89d518;
     margin: 0 5px;
-    font-size: 18px;
-    color: darkblue;
-    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    padding: 5px;
 }
 .btn-table{
     display: flex;
-    justify-content: space-around;
+    color: white;
+    margin: 10px 0;
+    width: 580px;
+    justify-content: space-between;
+}
+#myBtnTable1,
+#myBtnTable2,
+#myBtnTable3,
+#myBtnTable4,
+#myBtnTable5,
+#myBtnTable6{
+    width: 80px;
 }
 .modal,
 .modal2,
@@ -81,4 +98,67 @@ p{
     position: fixed;
     bottom: 3%;
     right: 3%;
+}
+@media(max-width: 414px){
+    .a-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__logo{
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px auto;
+    }
+    .name-table{
+        display: none;
+    }
+    .table{
+        display: flex;
+        flex-direction: column;
+    }
+    .table-info1,
+    .table-info2,
+    .table-info3,
+    .table-info4,
+    .table-info5,
+    .table-info6{
+        text-align: center;
+        width: 300px;
+        height: 100px;
+        border:1px solid #89d518;
+        margin: 10px auto;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+    }
+    .btn-table{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+     }
+    #myBtnTable1,
+    #myBtnTable2,
+    #myBtnTable3,
+    #myBtnTable4,
+    #myBtnTable5,
+    #myBtnTable6{
+        margin:4px auto;
+        width: 200px;
+    }
+    .message{
+        display: none;
+        padding: 10px;
+        font-size: 16px;
+        position: fixed;
+        bottom: 12%;
+        right: 3%;
+        border:2px solid limegreen;
+        background: white;
+        color:#000
+    }
+    .close{
+        margin: 0 0 0 23px;
+    }
 }

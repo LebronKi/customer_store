@@ -4,12 +4,12 @@
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <title>Login</title>
-
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+<div class="divmedia">
   <header>
-    <a href="#">
+    <a href="#s">
       <img class="logo" src="./src/imgs/ava.png" alt="logo">
     </a>
   </header>
@@ -19,7 +19,7 @@
         <div class="email  input-email">
           <label for="inputEmail" class="label">Email</label>
           <input type="email" class="input" id="inputEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                 placeholder="Enter Your Email" aria-describedby="emailHelp" name="userEmail"  required>
+                 placeholder="Enter your email" aria-describedby="emailHelp" name="userEmail"  required>
         </div>
         <div class="error-input">
           Error. The email was entered incorrectly
@@ -27,7 +27,7 @@
         <div class="password input-password">
           <label for="inputPassword" class="label">Password</label>
           <input type="password" class="input" id="inputPassword" pattern=".{6,}"
-                 placeholder="Enter Your Password" name="userPassword" required>
+                 placeholder="Enter your password" name="userPassword" required>
         </div>
         <div class="error-password">
           Error. The password was entered incorrectly
@@ -41,8 +41,7 @@
       </span>
     </div>
   </main>
-
-
+</div>
 <script src="./index.js"></script>
 </body>
 </html>
