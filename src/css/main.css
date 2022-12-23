@@ -11,9 +11,9 @@ body{
     display: flex;
 }
 .header__logo{
-    width: 300px;
+    width: 400px;
     object-fit: cover;
-    margin: 50px auto 50px;
+    margin: 50px auto;
 }
 .container{
     margin: 0 auto;
@@ -50,4 +50,14 @@ a{
     color: #a4045a;
     font-size: 25px;
     font-weight: 900;
+}
+@media (max-width: 414px) {
+    .a-img {
+        display: flex;
+    }
+    .header__logo {
+        width: 300px;
+        object-fit: cover;
+        margin: 30px auto;
+    }
 }

@@ -3,8 +3,8 @@ body{
 }
 .google-map {
     height: 500px;
-    width:100%;
-    border: 3px solid #eec59c;;
+    max-width:100%;
+    border: 1px solid #eec59c;;
 
 }
 h1{
